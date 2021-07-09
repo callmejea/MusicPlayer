@@ -1,3 +1,4 @@
 .idea
 .git
 tmp/cache.json
+client/cache/*.mp3

@@ -20,6 +20,12 @@ php -S 127.0.0.1:8888
 - mac 客户端
 - win 客户端
 
-### 相关链接
------
+# 相关链接
 **Fork from ** [https://github.com/mengkunsoft/MKOnlineMusicPlayer](https://github.com/mengkunsoft/MKOnlineMusicPlayer)
+
+# Thanks for 
+[https://github.com/mengkunsoft/MKOnlineMusicPlayer](https://github.com/mengkunsoft/MKOnlineMusicPlayer)
+
+[https://github.com/faiface/beep](https://github.com/faiface/beep)
+# License
+MIT
