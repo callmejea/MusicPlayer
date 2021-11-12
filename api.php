@@ -41,6 +41,38 @@ switch ($_POST['types']) {
         ];
 
         break;
+
+    case "search":
+        $file       = file_get_contents('./tmp/cache.json');
+        $arr        = json_decode($file, true);
+        $searchName = strtolower($_POST['name']);
+        $tracks     = [];
+        foreach ($arr as $k => $v) {
+            $t = strtolower($v);
+            if (strpos($t, $searchName) !== false) {
+                $tracks[] = [
+                    'id'       => $k,
+                    'name'     => $v,
+                    'ar'       => [
+                        [
+                            'name' => 'test',
+                        ]
+                    ],
+                    'artist'   => [''],
+                    'album'    => '',
+                    'lyric_id' => $k,
+                    'al'       => ['name' => 'test', 'picUrl' => ''],
+                    'source'   => 'local',
+                    'url_id'   => 'file.php?s=' . $k,
+                    'pic_id'   => null,
+                ];
+            }
+        }
+        $jsonp = $tracks;
+        break;
+    case "lyric":
+        $jsonp = "asdfa";
+        break;
     default:
         break;
 }

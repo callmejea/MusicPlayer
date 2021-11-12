@@ -16,10 +16,6 @@ php -S 127.0.0.1:8888
 ```
 - 结束，直接访问就能听歌了，如果列表没音乐就点一下播放列表，再点任意一个播放列表即可加载全部音乐
 
-### todo
-- mac 客户端
-- win 客户端
-
 # 相关链接
 **Fork from ** [https://github.com/mengkunsoft/MKOnlineMusicPlayer](https://github.com/mengkunsoft/MKOnlineMusicPlayer)
 
