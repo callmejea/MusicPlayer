@@ -1,0 +1,12 @@
+version: '2'
+
+volumes:
+  web:
+
+services:
+  web:
+    image: justdoitlikemea/musicplayer
+    volumes:
+      - /Users/jea/Music/download:/music/musicFiles
+    ports:
+      - "8888:8888"

@@ -2,11 +2,27 @@
 include_once "config.php";
 $jsonp = [];
 
+$files = glob($config['dir'] . '*');
+$arr   = [];
+if (!$files) {
+    p($config['cacheFile'], '[]');
+}
+foreach ($files as $file) {
+    $md5       = md5($file);
+    $arr[$md5] = str_replace($config['dir'], '', $file);
+}
+p($config['cacheFile'], json_encode($arr, JSON_UNESCAPED_UNICODE));
+
+function p($cacheFile, $content)
+{
+    file_put_contents($cacheFile, $content);
+}
+
 $callback = $_GET['callback'];
 switch ($_POST['types']) {
     case "playlist":
         $tracks = [];
-        $file   = file_get_contents('./tmp/cache.json');
+        $file   = file_get_contents($config['cacheFile']);
         $arr    = json_decode($file, true);
         foreach ($arr as $k => $v) {
             $tracks[] = [
