@@ -10,6 +10,7 @@ docker pull justdoitlikemea/musicplayer
 # 挂载本地的音乐目录到 /music/musicFiles；端口监听为8888，映射出来的端口随意～像下面一样
 docker run -v /Users/jea/Music/download:/music/musicFiles -p 8888:8888 -d justdoitlikemea/musicplayer
 #一份完整的docker-compose参见项目内的 docker-compose.yml
+# 访问： 你的IP:8888 即可
 ```
 
 ### 使用
@@ -22,7 +23,7 @@ docker run -v /Users/jea/Music/download:/music/musicFiles -p 8888:8888 -d justdo
 cd $DIR;
 php -S 127.0.0.1:8888
 ```
-- 结束，直接访问就能听歌了，如果列表没音乐就点一下播放列表，再点任意一个播放列表即可加载全部音乐
+- 结束，直接访问 127.0.0.1:8888 就能听歌了，如果列表没音乐就点一下播放列表，再点任意一个播放列表即可加载全部音乐
 
 # 相关链接
 **Fork from ** [https://github.com/mengkunsoft/MKOnlineMusicPlayer](https://github.com/mengkunsoft/MKOnlineMusicPlayer)
