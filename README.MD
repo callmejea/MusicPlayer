@@ -6,7 +6,8 @@ MusicPlayer - local player
 
 ### docker
 ```
-docker pull justdoitlikemea/musicplayer
+# x86
+docker pull justdoitlikemea/musicplayer:x86
 # 挂载本地的音乐目录到 /music/musicFiles；端口监听为8888，映射出来的端口随意～像下面一样
 docker run -v /Users/jea/Music/download:/music/musicFiles -p 8888:8888 -d justdoitlikemea/musicplayer
 #一份完整的docker-compose参见项目内的 docker-compose.yml
